@@ -1,6 +1,6 @@
 module ArgParse where
 
-data Conf = Conf { rule :: Maybe Int
+data oldConf = Conf { rule :: RuleNumber
                  , lines :: Int
                  , start :: Maybe Int
                  , window :: Int
@@ -8,7 +8,7 @@ data Conf = Conf { rule :: Maybe Int
                  }
 
 defaultConf :: Conf
-defaultConf = Conf{ rule = Nothing,
+defaultConf = Conf { rule = Nothing,
                     lines = 0,
                     start = Nothing,
                     window = 80,
@@ -16,13 +16,13 @@ defaultConf = Conf{ rule = Nothing,
                   }
 
 getOpts :: Conf -> [String] -> Maybe Conf
-getOpts conf, [] = Maybe conf
-getOpts conf, ["--rule":xs] =
-getOpts conf, ["--lines":xs] =
-getOpts conf, ["--start":xs] =
-getOpts conf, ["--window":xs] =
-getOpts conf, ["--move":xs] =
-getOpts conf, list = Nothing
+getOpts conf  [] = Maybe conf
+getOpts conf  ["--rule":xs]   =
+getOpts conf  ["--lines":xs]  =
+getOpts conf  ["--start":xs]  =
+getOpts conf  ["--window":xs] =
+getOpts conf  ["--move":xs]   =
+getOpts conf list = Nothing
 
 someFunc :: IO ()
 someFunc = putStrLn "someFunc"
