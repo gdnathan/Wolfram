@@ -1,7 +1,8 @@
 # Wolfram
-implementation of rule 30, 90 and 110 of the Wolfram’s elementary cellular automaton
+implementation of rule 30, 90 and 110 of the Wolfram’s elementary cellular automaton, in Haskell
 
-This is a stack environement.
+This is a stack environement. You have to install ``stack`` package.
+
 ``stack build`` to build the executable.
 
 ``make`` to build the executable and move it in the project's root 
