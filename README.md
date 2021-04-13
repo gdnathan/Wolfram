@@ -11,7 +11,7 @@ This is a stack environement. You have to install ``stack`` package.
 
 ``./wolfram --rule [val] --start [val] --lines [val] --window [val] --move [val]``
 
-``--rule`` : the ruleset to use (no default value, mandatory).
+``--rule`` : the ruleset to use (no default value, mandatory). Only rule 30, 60 and 90 are implemented
 
 ``-–start`` : the generation number at which to start the display. The default value is 0.
 
@@ -22,4 +22,4 @@ This is a stack environement. You have to install ``stack`` package.
 ``-–move`` : a translation to apply on the window. If negative, the window is translated to the left.If positive, it’s translated to the right.
 
 
-``[val]`` : any integer value
+``[val]`` : any integer value, depending of the argument.
